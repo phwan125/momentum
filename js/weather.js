@@ -6,6 +6,7 @@ function successFunction(position) {
   const longitude = position.coords.longitude;
   console.log("you live in", latitude, longitude);
   const url = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`;
+  console.log(url);
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
